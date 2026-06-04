@@ -1,0 +1,336 @@
+If you're preparing for Java interviews, coding rounds, or Java fundamentals, these are the most commonly asked **Array coding questions**, arranged from beginner to advanced.
+
+## Basic Array Questions
+
+1. Find the largest element in an array.
+2. Find the smallest element in an array.
+3. Find the second largest element in an array.
+4. Find the second smallest element in an array.
+5. Calculate the sum of all elements in an array.
+6. Calculate the average of array elements.
+7. Count even and odd numbers in an array.
+8. Find the maximum and minimum element in a single traversal.
+9. Reverse an array.
+10. Copy one array into another array.
+
+---
+
+## Searching Questions
+
+11. Linear Search.
+12. Binary Search.
+13. Find the first occurrence of an element.
+14. Find the last occurrence of an element.
+15. Count occurrences of a given element.
+16. Check whether an element exists in an array.
+17. Find the index of a given element.
+
+---
+
+## Sorting-Based Questions
+
+18. Sort an array in ascending order.
+19. Sort an array in descending order.
+20. Implement Bubble Sort.
+21. Implement Selection Sort.
+22. Implement Insertion Sort.
+23. Implement Merge Sort.
+24. Implement Quick Sort.
+25. Sort only even numbers in an array.
+26. Sort 0s, 1s, and 2s (Dutch National Flag problem).
+
+---
+
+## Frequency and Duplicate Questions
+
+27. Find duplicate elements in an array.
+28. Remove duplicates from an array.
+29. Count frequency of each element.
+30. Find the first non-repeated element.
+31. Find the first repeated element.
+32. Find all unique elements.
+33. Find elements occurring more than once.
+
+---
+
+## Array Rotation Questions
+
+34. Left rotate an array by one position.
+35. Right rotate an array by one position.
+36. Left rotate an array by K positions.
+37. Right rotate an array by K positions.
+38. Check if one array is a rotation of another.
+
+---
+
+## Missing and Repeating Number Questions
+
+39. Find the missing number from 1 to N.
+40. Find one repeating number.
+41. Find one missing and one repeating number.
+42. Find all missing numbers in an array.
+43. Find the smallest missing positive integer.
+
+---
+
+## Subarray Questions
+
+44. Find the largest sum contiguous subarray (Kadane's Algorithm).
+45. Find the smallest sum subarray.
+46. Find all subarrays.
+47. Count the number of subarrays.
+48. Find subarray with a given sum.
+49. Find the longest subarray with sum K.
+50. Find the maximum product subarray.
+
+---
+
+## Pair and Triplet Questions
+
+51. Find a pair with a given sum.
+52. Find all pairs with a given sum.
+53. Find a pair with maximum product.
+54. Find a pair with minimum difference.
+55. Find a triplet with a given sum.
+56. Find all triplets with zero sum.
+57. Find quadruplets with a given sum.
+
+---
+
+## Two Array Questions
+
+58. Merge two sorted arrays.
+59. Find the union of two arrays.
+60. Find the intersection of two arrays.
+61. Check if two arrays are equal.
+62. Find common elements in three sorted arrays.
+63. Find the median of two sorted arrays.
+64. Find elements present in one array but not the other.
+
+---
+
+## Rearrangement Questions
+
+65. Move all zeros to the end.
+66. Move all negative numbers to one side.
+67. Rearrange array in alternating positive and negative numbers.
+68. Segregate even and odd numbers.
+69. Rearrange array according to given indexes.
+70. Rearrange array so that arr[i] = i.
+
+---
+
+## Advanced Interview Questions
+
+71. Find the majority element (Moore's Voting Algorithm).
+72. Find leaders in an array.
+73. Find equilibrium index.
+74. Find stock buy and sell profit.
+75. Trapping Rain Water problem.
+76. Container With Most Water.
+77. Product of array except self.
+78. Maximum difference between two elements.
+79. Maximum circular subarray sum.
+80. Longest consecutive sequence.
+81. Find peak element.
+82. Find inversion count.
+83. Find kth largest element.
+84. Find kth smallest element.
+85. Sliding Window Maximum.
+86. Merge overlapping intervals.
+87. Next Greater Element.
+88. Maximum sum increasing subsequence.
+89. Longest increasing subsequence.
+90. Find median in a stream of integers.
+
+---
+
+## Frequently Asked in Java Interviews
+
+* Reverse an array without using another array.
+* Remove duplicates from a sorted array.
+* Move all zeros to the end while maintaining order.
+* Find the missing number.
+* Find the majority element.
+* Find the second largest element.
+* Rotate an array by K positions.
+* Find duplicates in an array.
+* Kadane's Algorithm.
+* Two Sum problem.
+* Merge two sorted arrays.
+* Longest consecutive sequence.
+* Product of array except self.
+* Trapping Rain Water.
+* Sliding Window Maximum.
+
+Mastering these 90 questions will cover the majority of array-based problems asked in Java interviews from beginner to experienced levels.
+
+## Basic String Questions
+
+1. Reverse a String.
+2. Check whether a String is a palindrome.
+3. Count the number of characters in a String.
+4. Count vowels and consonants in a String.
+5. Count uppercase and lowercase letters.
+6. Count digits and special characters.
+7. Remove all whitespaces from a String.
+8. Convert a String to uppercase and lowercase.
+9. Find the length of a String without using `length()`.
+10. Print each character of a String.
+
+---
+
+## Character Frequency Questions
+
+11. Count the frequency of each character.
+12. Find the first non-repeated character.
+13. Find the first repeated character.
+14. Find duplicate characters in a String.
+15. Find the most frequent character.
+16. Find the least frequent character.
+17. Count occurrences of a specific character.
+18. Remove duplicate characters from a String.
+
+---
+
+## String Comparison Questions
+
+19. Check if two Strings are equal.
+20. Check if two Strings are anagrams.
+21. Check if two Strings are rotations of each other.
+22. Compare two Strings without using `equals()`.
+23. Find common characters between two Strings.
+24. Find uncommon characters between two Strings.
+
+---
+
+## Substring Questions
+
+25. Find all substrings of a String.
+26. Count total substrings.
+27. Find the longest substring without repeating characters.
+28. Find the longest palindromic substring.
+29. Find the shortest substring containing all characters of another String.
+30. Find a substring within a String (implement `indexOf()`).
+
+---
+
+## Word-Based Questions
+
+31. Count the number of words in a sentence.
+32. Reverse words in a sentence.
+33. Reverse each word individually.
+34. Find the longest word in a sentence.
+35. Find the shortest word in a sentence.
+36. Count occurrences of a specific word.
+37. Remove duplicate words.
+38. Sort words alphabetically.
+39. Find the frequency of each word.
+40. Capitalize the first letter of each word.
+
+---
+
+## String Manipulation Questions
+
+41. Remove all duplicate characters.
+42. Remove a given character from a String.
+43. Replace one character with another.
+44. Remove special characters.
+45. Remove vowels from a String.
+46. Insert a character at a given position.
+47. Delete a character at a given position.
+48. Swap two Strings without using a third variable.
+49. Toggle case of each character.
+50. Compress a String (e.g., `aaabbc → a3b2c1`).
+
+---
+
+## Pattern Matching Questions
+
+51. Implement String matching without using built-in methods.
+52. Find all occurrences of a pattern in a String.
+53. Implement Rabin-Karp Algorithm.
+54. Implement KMP (Knuth-Morris-Pratt) Algorithm.
+55. Check whether a pattern exists in a String.
+
+---
+
+## Palindrome-Based Questions
+
+56. Check if a String is a palindrome.
+57. Count all palindromic substrings.
+58. Find the longest palindromic substring.
+59. Find the minimum characters required to make a palindrome.
+60. Partition a String into palindromes.
+
+---
+
+## Anagram Questions
+
+61. Check whether two Strings are anagrams.
+62. Group anagrams from a list of Strings.
+63. Find all anagram occurrences in a String.
+64. Check whether a sentence is an anagram of another sentence.
+
+---
+
+## Recursion-Based String Questions
+
+65. Reverse a String using recursion.
+66. Remove duplicates using recursion.
+67. Generate all permutations of a String.
+68. Generate all combinations of a String.
+69. Check palindrome using recursion.
+
+---
+
+## Advanced Interview Questions
+
+70. Longest Common Prefix.
+71. Longest Common Subsequence (LCS).
+72. Longest Common Substring.
+73. Edit Distance (Levenshtein Distance).
+74. Minimum Window Substring.
+75. Word Break Problem.
+76. String Permutations.
+77. String Combinations.
+78. Decode Encoded String (`3[a2[c]] → accaccacc`).
+79. Zigzag Conversion.
+80. Implement Regular Expression Matching.
+81. Check if a String contains only unique characters.
+82. Find the longest repeating character replacement.
+83. Rearrange characters so no adjacent characters are the same.
+84. Find the smallest window containing all distinct characters.
+85. Check if one String is a subsequence of another.
+86. Find the longest valid parentheses substring.
+87. Count distinct subsequences.
+88. Implement String-to-Integer conversion (`atoi`).
+89. Multiply two large numbers represented as Strings.
+90. Check whether two Strings are isomorphic.
+
+---
+
+## Frequently Asked Java Interview String Problems
+
+1. Reverse a String.
+2. Check Palindrome.
+3. Check Anagram.
+4. Find Duplicate Characters.
+5. Count Character Frequency.
+6. First Non-Repeated Character.
+7. Reverse Words in a Sentence.
+8. Longest Substring Without Repeating Characters.
+9. String Compression.
+10. Longest Common Prefix.
+11. Check Rotations.
+12. Remove Duplicates.
+13. Count Words.
+14. Longest Palindromic Substring.
+15. String Permutations.
+16. Minimum Window Substring.
+17. Word Break Problem.
+18. Longest Common Subsequence.
+19. Implement `atoi()`.
+20. Group Anagrams.
+
+These questions cover nearly all string concepts used in Java interviews, including `String`, `StringBuilder`, `StringBuffer`, arrays of characters, hashing, sliding window, recursion, dynamic programming, and pattern matching algorithms.

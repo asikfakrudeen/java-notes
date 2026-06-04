@@ -1,0 +1,45 @@
+Define List.
+A List is an ordered collection that stores elements in the sequence they are inserted and allows duplicates.
+
+Characteristics :
+✅ Maintains insertion order
+✅ Allows duplicates
+✅ Supports index-based access
+
+Define Set.
+A Set is a collection that stores unique elements and does not allow duplicates.
+
+Characteristics :
+✅ No duplicates
+✅ Usually no index access
+✅ Focuses on uniqueness
+
+Define Map.
+A Map stores data as key-value pairs, where each key is unique and maps to a value.
+
+Characteristics
+✅ Stores key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+
+Define ArrayList.
+ArrayList is a resizable array implementation of the List interface that stores elements in contiguous memory locations and allows dynamic growth.
+
+Characteristics :
+✅ Maintains insertion order
+✅ Allows duplicates
+✅ Fast random access (get(index))
+✅ Dynamic size
+
+Define LinkedList.
+LinkedList is a List implementation in which elements are stored as nodes connected through links, allowing efficient insertions and deletions.
+
+Characteristics :
+✅ Maintains insertion order
+✅ Allows duplicates
+✅ Dynamic size
+✅ Efficient insertions/deletions
+
+Define HashSet.
+Define LinkedHashSet.
+Define TreeSet.
