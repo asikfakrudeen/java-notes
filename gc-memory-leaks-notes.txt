@@ -1,0 +1,141 @@
+Garbage Collection (GC):
+Garbage Collection is an automatic memory management mechanism in Java that identifies and removes objects that are no longer reachable by the application.
+
+Characteristics:
+✅ Automatically manages memory allocation and deallocation
+✅ Removes unreachable objects from memory
+✅ Helps prevent memory leaks caused by unused objects
+✅ Runs in the background using the JVM
+✅ Improves application memory utilization
+
+Garbage Collector
+A Garbage Collector is a JVM component that identifies and removes unreachable objects from the heap memory.
+
+Characteristics:
+✅ Runs automatically by the JVM
+✅ Reclaims memory occupied by unused objects
+✅ Helps improve memory utilization
+✅ Reduces manual memory management
+✅ Supports automatic memory cleanup
+
+Heap Memory:
+Heap Memory is a runtime memory area in Java where objects and instance variables are stored.
+
+Characteristics:
+✅ Shared among all threads
+✅ Stores objects and instance variables
+✅ Managed by the Garbage Collector
+✅ Created when the JVM starts
+✅ Released when the JVM terminates
+
+Reachable Object:
+A Reachable Object is an object that can be accessed directly or indirectly through active references in the application.
+
+Characteristics:
+✅ Can be accessed through a valid reference
+✅ Remains in heap memory
+✅ Is not eligible for garbage collection
+✅ May be referenced directly or indirectly
+✅ Continues to be used by the application
+
+Unreachable Object
+An Unreachable Object is an object that cannot be accessed through any active reference in the application.
+
+Characteristics:
+✅ Cannot be accessed through a valid reference
+✅ Becomes eligible for garbage collection
+✅ Remains in memory until GC executes
+✅ Occupies heap memory temporarily
+✅ Is removed by the Garbage Collector
+
+Minor Garbage Collection:
+Minor Garbage Collection is a garbage collection process that removes unreachable objects from the Young Generation of heap memory.
+
+Characteristics:
+✅ Occurs in the Young Generation
+✅ Runs more frequently than Major GC
+✅ Removes short-lived objects
+✅ Improves memory availability
+✅ Usually completes quickly
+
+Major Garbage Collection
+Definition
+
+Major Garbage Collection is a garbage collection process that removes unreachable objects from the Old Generation of heap memory.
+
+Characteristics:
+✅ Occurs in the Old Generation
+✅ Runs less frequently than Minor GC
+✅ Processes long-lived objects
+✅ Takes more time than Minor GC
+✅ May impact application performance
+
+Full Garbage Collection:
+Full Garbage Collection is a garbage collection process that examines and cleans the entire heap memory.
+
+Characteristics
+✅ Processes Young and Old Generations
+✅ Reclaims maximum possible memory
+✅ Takes more time than other GC operations
+✅ May pause application execution
+✅ Used when memory requirements are high
+
+Young Generation:
+The Young Generation is a region of heap memory where newly created objects are initially allocated.
+
+Characteristics:
+✅ Stores newly created objects
+✅ Contains Eden and Survivor spaces
+✅ Processes short-lived objects
+✅ Frequently cleaned by Minor GC
+✅ Improves memory management efficiency
+
+Old Generation:
+The Old Generation is a region of heap memory where long-lived objects are stored.
+
+Characteristics:
+✅ Stores long-lived objects
+✅ Receives promoted objects from Young Generation
+✅ Processed by Major GC
+✅ Contains objects with longer lifecycles
+✅ Occupies a significant portion of heap memory
+
+System.gc():
+System.gc() is a method in Java that requests the JVM to perform garbage collection.
+
+Characteristics:
+✅ Requests garbage collection execution
+✅ Does not guarantee immediate garbage collection
+✅ Execution depends on JVM implementation
+✅ Used for memory management requests
+✅ Should not be relied upon for application logic
+
+finalize():
+finalize() is a method that was used to perform cleanup operations before an object is removed by the Garbage Collector.
+
+Characteristics:
+✅ Executed before object removal
+✅ Invoked by the Garbage Collector
+✅ Does not guarantee execution timing
+✅ Introduces performance overhead
+✅ Deprecated in modern Java versions
+
+Memory Leak:
+A Memory Leak is a situation where objects remain reachable and occupy memory even though they are no longer required by the application.
+
+Characteristics:
+✅ Causes unnecessary memory consumption
+✅ Reduces available heap memory
+✅ May degrade application performance
+✅ Can lead to OutOfMemoryError
+✅ Often caused by unused references
+
+OutOfMemoryError:
+An OutOfMemoryError is an error that occurs when the JVM cannot allocate sufficient memory for object creation.
+
+Characteristics:
+✅ Occurs when memory is exhausted
+✅ Prevents new object allocation
+✅ May terminate application execution
+✅ Commonly caused by memory leaks
+✅ Indicates insufficient available memory

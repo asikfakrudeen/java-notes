@@ -1,0 +1,199 @@
+Stream:
+A Stream is an interface in Java that represents a sequence of elements and supports functional-style operations for processing data.
+
+Characteristics:
+✅ Processes data from collections, arrays, or other data sources
+✅ Does not store data itself
+✅ Supports functional-style operations
+✅ Supports sequential and parallel processing
+✅ Processes data using a pipeline of operations
+
+Intermediate Operations:
+Intermediate Operations are operations in a Stream that transform, filter, or manipulate data and return another Stream.
+
+Characteristics:
+✅ Return a Stream as output
+✅ Can be chained together
+✅ Are lazily evaluated
+✅ Do not execute until a terminal operation is invoked
+✅ Used for data transformation and filtering
+
+Terminal Operations:
+Terminal Operations are operations in a Stream that produce a result or a side effect and terminate the Stream pipeline.
+
+Characteristics:
+✅ Produce a final result or side effect
+✅ Do not return a Stream
+✅ Trigger the execution of the Stream pipeline
+✅ Can be executed only once per Stream
+✅ Mark the end of Stream processing
+
+filter():
+filter() is an intermediate operation in a Stream that selects elements based on a given condition.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Predicate
+✅ Filters elements that satisfy a condition
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+map():
+map() is an intermediate operation in a Stream that transforms each element into another form.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Function
+✅ Transforms elements from one type to another
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+flatMap():
+flatMap() is an intermediate operation in a Stream that transforms and flattens nested data structures into a single Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Function
+✅ Converts nested structures into a single Stream
+✅ Is lazily evaluated
+✅ Used for flattening collections or arrays
+
+sorted()
+sorted() is an intermediate operation in a Stream that arranges elements in sorted order.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Maintains elements in sorted order
+✅ Supports natural sorting
+✅ Supports custom sorting using a Comparator
+✅ Is lazily evaluated
+
+distinct():
+distinct() is an intermediate operation in a Stream that removes duplicate elements from a Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Removes duplicate elements
+✅ Preserves encounter order for ordered Streams
+✅ Is lazily evaluated
+✅ Uses equals() and hashCode() for comparison
+
+limit():
+limit() is an intermediate operation in a Stream that restricts the number of elements in a Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Restricts the number of elements processed
+✅ Is useful for large data sets
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+skip():
+skip() is an intermediate operation in a Stream that ignores a specified number of elements from the beginning of a Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Skips the specified number of elements
+✅ Is useful for pagination
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+forEach():
+forEach() is a terminal operation in a Stream that performs an action on each element.
+
+Characteristics:
+✅ Produces a side effect
+✅ Does not return a Stream
+✅ Processes each element individually
+✅ Triggers Stream execution
+✅ Commonly used for displaying data
+
+collect():
+collect() is a terminal operation in a Stream that accumulates elements into a collection or another result container.
+
+Characteristics:
+✅ Produces a final result
+✅ Does not return a Stream
+✅ Triggers Stream execution
+✅ Supports collection into List, Set, or Map
+✅ Commonly used with Collectors
+
+reduce():
+reduce() is a terminal operation in a Stream that combines elements into a single result.
+
+Characteristics:
+✅ Produces a final result
+✅ Does not return a Stream
+✅ Triggers Stream execution
+✅ Combines elements using an accumulator function
+✅ Used for aggregation operations
+
+count():
+count() is a terminal operation in a Stream that returns the number of elements in a Stream.
+
+Characteristics:
+✅ Produces a final result
+✅ Returns a long value
+✅ Triggers Stream execution
+✅ Counts all elements in the Stream
+✅ Does not modify the original data source
+
+findFirst():
+findFirst() is a terminal operation in a Stream that returns the first element of a Stream.
+
+Characteristics:
+✅ Produces a final result
+✅ Returns an Optional
+✅ Triggers Stream execution
+✅ Returns the first element if present
+✅ Is useful when order matters
+
+findAny():
+findAny() is a terminal operation in a Stream that returns any element from a Stream.
+
+Characteristics:
+✅ Produces a final result
+✅ Returns an Optional
+✅ Triggers Stream execution
+✅ May return any matching element
+✅ Is useful for parallel processing
+
+anyMatch():
+anyMatch() is a terminal operation in a Stream that checks whether at least one element satisfies a given condition.
+
+Characteristics:
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if any element matches
+✅ Supports short-circuit evaluation
+
+allMatch():
+allMatch() is a terminal operation in a Stream that checks whether all elements satisfy a given condition.
+
+Characteristics:
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if all elements match
+✅ Supports short-circuit evaluation
+
+noneMatch():
+noneMatch() is a terminal operation in a Stream that checks whether no elements satisfy a given condition.
+
+Characteristics:
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if no elements match
+✅ Supports short-circuit evaluation
+
+Parallel Stream
+A Parallel Stream is a Stream that processes elements concurrently using multiple threads from the ForkJoinPool.
+
+Characteristics:
+✅ Processes elements using multiple threads
+✅ Improves performance for large data sets
+✅ Supports functional-style operations
+✅ Uses the ForkJoinPool framework internally
+✅ May not preserve processing order

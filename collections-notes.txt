@@ -1,45 +1,107 @@
-Define List.
-A List is an ordered collection that stores elements in the sequence they are inserted and allows duplicates.
+# List
+A List is an interface in the Java Collections Framework that stores elements in an ordered sequence and allows duplicate elements.
 
-Characteristics :
+Characteristics:
 ✅ Maintains insertion order
-✅ Allows duplicates
+✅ Allows duplicate elements
 ✅ Supports index-based access
+✅ Dynamic in size
 
-Define Set.
-A Set is a collection that stores unique elements and does not allow duplicates.
+# Set
+A Set is an interface in the Java Collections Framework that stores unique elements and does not allow duplicate elements.
 
-Characteristics :
-✅ No duplicates
-✅ Usually no index access
-✅ Focuses on uniqueness
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Focuses on uniqueness of elements
+✅ Generally does not support index-based access
+✅ Dynamic in size
 
-Define Map.
-A Map stores data as key-value pairs, where each key is unique and maps to a value.
+# Map
+A Map is an interface in the Java Collections Framework that stores data as key-value pairs, where each key is unique and maps to a value.
 
-Characteristics
-✅ Stores key-value pairs
+Characteristics:
+✅ Stores data as key-value pairs
 ✅ Keys must be unique
 ✅ Values can be duplicated
+✅ Provides fast lookup using keys
 
-Define ArrayList.
-ArrayList is a resizable array implementation of the List interface that stores elements in contiguous memory locations and allows dynamic growth.
+# ArrayList
+An ArrayList is a class in the Java Collections Framework that implements the List interface and stores elements using a dynamically resizable array.
 
-Characteristics :
+Characteristics:
 ✅ Maintains insertion order
-✅ Allows duplicates
-✅ Fast random access (get(index))
-✅ Dynamic size
+✅ Allows duplicate elements
+✅ Supports index-based access
+✅ Dynamic in size
+✅ Provides fast random access
 
-Define LinkedList.
-LinkedList is a List implementation in which elements are stored as nodes connected through links, allowing efficient insertions and deletions.
+# LinkedList
+A LinkedList is a class in the Java Collections Framework that implements the List interface and stores elements as nodes connected through links.
 
-Characteristics :
+Characteristics:
 ✅ Maintains insertion order
-✅ Allows duplicates
-✅ Dynamic size
-✅ Efficient insertions/deletions
+✅ Allows duplicate elements
+✅ Supports index-based access
+✅ Dynamic in size
+✅ Provides efficient insertion and deletion operations
 
-Define HashSet.
-Define LinkedHashSet.
-Define TreeSet.
+# HashSet
+A HashSet is a class in the Java Collections Framework that implements the Set interface and stores unique elements using a hash table.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Allows one null element
+✅ Does not maintain insertion order
+✅ Provides average O(1) time complexity for add, remove, and contains operations
+
+# LinkedHashSet
+A LinkedHashSet is a class in the Java Collections Framework that implements the Set interface and stores unique elements using a hash table and a linked list.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Allows one null element
+✅ Maintains insertion order
+✅ Provides average O(1) time complexity for add, remove, and contains operations
+
+# TreeSet
+A TreeSet is a class in the Java Collections Framework that implements the NavigableSet interface and stores unique elements in sorted order using a Red-Black Tree.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Does not allow null elements
+✅ Maintains elements in sorted order
+✅ Provides O(log n) time complexity for add, remove, and contains operations
+
+# HashMap
+A HashMap is a class in the Java Collections Framework that implements the Map interface and stores data as key-value pairs using a hash table.
+
+Characteristics
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Allows one null key and multiple null values
+✅ Does not maintain insertion order
+✅ Provides average O(1) time complexity for put, get, and remove operations
+
+# Hashtable
+A Hashtable is a class in the Java Collections Framework that implements the Map interface and stores data as key-value pairs using a hash table.
+
+Characteristics:
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Does not allow null keys or null values
+✅ Is synchronized and thread-safe
+✅ Provides average O(1) time complexity for put, get, and remove operations
+
+# TreeMap
+A TreeMap is a class in the Java Collections Framework that implements the NavigableMap interface and stores data as key-value pairs in sorted order of keys using a Red-Black Tree.
+
+Characteristics:
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Does not allow null keys
+✅ Allows null values
+✅ Maintains keys in sorted order
+✅ Provides O(log n) time complexity for put, get, and remove operations

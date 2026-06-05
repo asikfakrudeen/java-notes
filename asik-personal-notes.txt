@@ -1,0 +1,521 @@
+String
+A String is a class in Java that represents a sequence of characters and stores text data as an immutable object.
+
+Characteristics:
+✅ Stores a sequence of characters
+✅ Is immutable (cannot be modified after creation)
+✅ Supports index-based access to characters
+✅ Allows string literals using the String Pool
+✅ Is thread-safe because of immutability
+
+StringBuilder:
+A StringBuilder is a class in Java that represents a sequence of characters and allows modification of character data without creating new objects.
+
+Characteristics:
+✅ Stores a sequence of characters
+✅ Is mutable (can be modified after creation)
+✅ Provides efficient string manipulation operations
+✅ Is not synchronized and not thread-safe
+✅ Provides better performance than String for frequent modifications
+
+StringBuffer:
+A StringBuffer is a class in Java that represents a sequence of characters and allows modification of character data without creating new objects.
+
+Characteristics
+✅ Stores a sequence of characters
+✅ Is mutable (can be modified after creation)
+✅ Provides efficient string manipulation operations
+✅ Is synchronized and thread-safe
+✅ Provides better performance than String for frequent modifications
+
+
+| Feature                       | String                    | StringBuilder | StringBuffer |
+| ----------------------------- | ------------------------- | ------------- | ------------ |
+| Mutable                       | ❌ No                      | ✅ Yes         | ✅ Yes        |
+| Thread Safe                   | ✅ Yes (Immutable)         | ❌ No          | ✅ Yes        |
+| Performance for Modifications | Slow                      | Fastest       | Fast         |
+| Synchronization               | Not Required              | No            | Yes          |
+| Memory Usage                  | More for frequent changes | Less          | Less         |
+
+
+Quick Comparison
+
+# List
+A List is an interface in the Java Collections Framework that stores elements in an ordered sequence and allows duplicate elements.
+
+Characteristics:
+✅ Maintains insertion order
+✅ Allows duplicate elements
+✅ Supports index-based access
+✅ Dynamic in size
+
+# Set
+A Set is an interface in the Java Collections Framework that stores unique elements and does not allow duplicate elements.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Focuses on uniqueness of elements
+✅ Generally does not support index-based access
+✅ Dynamic in size
+
+# Map
+A Map is an interface in the Java Collections Framework that stores data as key-value pairs, where each key is unique and maps to a value.
+
+Characteristics:
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Provides fast lookup using keys
+
+# ArrayList
+An ArrayList is a class in the Java Collections Framework that implements the List interface and stores elements using a dynamically resizable array.
+
+Characteristics:
+✅ Maintains insertion order
+✅ Allows duplicate elements
+✅ Supports index-based access
+✅ Dynamic in size
+✅ Provides fast random access
+
+# LinkedList
+A LinkedList is a class in the Java Collections Framework that implements the List interface and stores elements as nodes connected through links.
+
+Characteristics:
+✅ Maintains insertion order
+✅ Allows duplicate elements
+✅ Supports index-based access
+✅ Dynamic in size
+✅ Provides efficient insertion and deletion operations
+
+# HashSet
+A HashSet is a class in the Java Collections Framework that implements the Set interface and stores unique elements using a hash table.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Allows one null element
+✅ Does not maintain insertion order
+✅ Provides average O(1) time complexity for add, remove, and contains operations
+
+# LinkedHashSet
+A LinkedHashSet is a class in the Java Collections Framework that implements the Set interface and stores unique elements using a hash table and a linked list.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Allows one null element
+✅ Maintains insertion order
+✅ Provides average O(1) time complexity for add, remove, and contains operations
+
+# TreeSet
+A TreeSet is a class in the Java Collections Framework that implements the NavigableSet interface and stores unique elements in sorted order using a Red-Black Tree.
+
+Characteristics:
+✅ Does not allow duplicate elements
+✅ Does not allow null elements
+✅ Maintains elements in sorted order
+✅ Provides O(log n) time complexity for add, remove, and contains operations
+
+# HashMap
+A HashMap is a class in the Java Collections Framework that implements the Map interface and stores data as key-value pairs using a hash table.
+
+Characteristics
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Allows one null key and multiple null values
+✅ Does not maintain insertion order
+✅ Provides average O(1) time complexity for put, get, and remove operations
+
+# Hashtable
+A Hashtable is a class in the Java Collections Framework that implements the Map interface and stores data as key-value pairs using a hash table.
+
+Characteristics:
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Does not allow null keys or null values
+✅ Is synchronized and thread-safe
+✅ Provides average O(1) time complexity for put, get, and remove operations
+
+# TreeMap
+A TreeMap is a class in the Java Collections Framework that implements the NavigableMap interface and stores data as key-value pairs in sorted order of keys using a Red-Black Tree.
+
+Characteristics:
+✅ Stores data as key-value pairs
+✅ Keys must be unique
+✅ Values can be duplicated
+✅ Does not allow null keys
+✅ Allows null values
+✅ Maintains keys in sorted order
+✅ Provides O(log n) time complexity for put, get, and remove operations
+
+Stream:
+A Stream is an interface in Java that represents a sequence of elements and supports functional-style operations for processing data.
+
+Characteristics:
+✅ Processes data from collections, arrays, or other data sources
+✅ Does not store data itself
+✅ Supports functional-style operations
+✅ Supports sequential and parallel processing
+✅ Processes data using a pipeline of operations
+
+Intermediate Operations:
+Intermediate Operations are operations in a Stream that transform, filter, or manipulate data and return another Stream.
+
+Characteristics:
+✅ Return a Stream as output
+✅ Can be chained together
+✅ Are lazily evaluated
+✅ Do not execute until a terminal operation is invoked
+✅ Used for data transformation and filtering
+
+Terminal Operations:
+Terminal Operations are operations in a Stream that produce a result or a side effect and terminate the Stream pipeline.
+
+Characteristics:
+✅ Produce a final result or side effect
+✅ Do not return a Stream
+✅ Trigger the execution of the Stream pipeline
+✅ Can be executed only once per Stream
+✅ Mark the end of Stream processing
+
+filter():
+filter() is an intermediate operation in a Stream that selects elements based on a given condition.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Predicate
+✅ Filters elements that satisfy a condition
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+map():
+map() is an intermediate operation in a Stream that transforms each element into another form.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Function
+✅ Transforms elements from one type to another
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+flatMap():
+flatMap() is an intermediate operation in a Stream that transforms and flattens nested data structures into a single Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Processes elements using a Function
+✅ Converts nested structures into a single Stream
+✅ Is lazily evaluated
+✅ Used for flattening collections or arrays
+
+sorted()
+sorted() is an intermediate operation in a Stream that arranges elements in sorted order.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Maintains elements in sorted order
+✅ Supports natural sorting
+✅ Supports custom sorting using a Comparator
+✅ Is lazily evaluated
+
+distinct():
+distinct() is an intermediate operation in a Stream that removes duplicate elements from a Stream.
+
+Characteristics:
+✅ Returns a Stream as output
+✅ Removes duplicate elements
+✅ Preserves encounter order for ordered Streams
+✅ Is lazily evaluated
+✅ Uses equals() and hashCode() for comparison
+
+limit():
+limit() is an intermediate operation in a Stream that restricts the number of elements in a Stream.
+
+Characteristics
+
+✅ Returns a Stream as output
+✅ Restricts the number of elements processed
+✅ Is useful for large data sets
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+skip():
+skip() is an intermediate operation in a Stream that ignores a specified number of elements from the beginning of a Stream.
+
+Characteristics
+
+✅ Returns a Stream as output
+✅ Skips the specified number of elements
+✅ Is useful for pagination
+✅ Is lazily evaluated
+✅ Does not modify the original data source
+
+forEach():
+forEach() is a terminal operation in a Stream that performs an action on each element.
+
+Characteristics
+
+✅ Produces a side effect
+✅ Does not return a Stream
+✅ Processes each element individually
+✅ Triggers Stream execution
+✅ Commonly used for displaying data
+
+collect():
+collect() is a terminal operation in a Stream that accumulates elements into a collection or another result container.
+
+Characteristics
+
+✅ Produces a final result
+✅ Does not return a Stream
+✅ Triggers Stream execution
+✅ Supports collection into List, Set, or Map
+✅ Commonly used with Collectors
+
+reduce():
+reduce() is a terminal operation in a Stream that combines elements into a single result.
+
+Characteristics
+
+✅ Produces a final result
+✅ Does not return a Stream
+✅ Triggers Stream execution
+✅ Combines elements using an accumulator function
+✅ Used for aggregation operations
+
+count():
+count() is a terminal operation in a Stream that returns the number of elements in a Stream.
+
+Characteristics
+
+✅ Produces a final result
+✅ Returns a long value
+✅ Triggers Stream execution
+✅ Counts all elements in the Stream
+✅ Does not modify the original data source
+
+findFirst():
+findFirst() is a terminal operation in a Stream that returns the first element of a Stream.
+
+Characteristics
+
+✅ Produces a final result
+✅ Returns an Optional
+✅ Triggers Stream execution
+✅ Returns the first element if present
+✅ Is useful when order matters
+
+findAny():
+findAny() is a terminal operation in a Stream that returns any element from a Stream.
+
+Characteristics
+
+✅ Produces a final result
+✅ Returns an Optional
+✅ Triggers Stream execution
+✅ May return any matching element
+✅ Is useful for parallel processing
+
+anyMatch():
+anyMatch() is a terminal operation in a Stream that checks whether at least one element satisfies a given condition.
+
+Characteristics
+
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if any element matches
+✅ Supports short-circuit evaluation
+
+allMatch():
+allMatch() is a terminal operation in a Stream that checks whether all elements satisfy a given condition.
+
+Characteristics
+
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if all elements match
+✅ Supports short-circuit evaluation
+
+noneMatch():
+noneMatch() is a terminal operation in a Stream that checks whether no elements satisfy a given condition.
+
+Characteristics
+
+✅ Produces a boolean result
+✅ Triggers Stream execution
+✅ Processes elements using a Predicate
+✅ Returns true if no elements match
+✅ Supports short-circuit evaluation
+
+Parallel Stream
+A Parallel Stream is a Stream that processes elements concurrently using multiple threads from the ForkJoinPool.
+
+Characteristics:
+✅ Processes elements using multiple threads
+✅ Improves performance for large data sets
+✅ Supports functional-style operations
+✅ Uses the ForkJoinPool framework internally
+✅ May not preserve processing order
+
+Garbage Collection (GC):
+Garbage Collection is an automatic memory management mechanism in Java that identifies and removes objects that are no longer reachable by the application.
+
+Characteristics
+✅ Automatically manages memory allocation and deallocation
+✅ Removes unreachable objects from memory
+✅ Helps prevent memory leaks caused by unused objects
+✅ Runs in the background using the JVM
+✅ Improves application memory utilization
+
+Garbage Collector
+A Garbage Collector is a JVM component that identifies and removes unreachable objects from the heap memory.
+
+Characteristics
+✅ Runs automatically by the JVM
+✅ Reclaims memory occupied by unused objects
+✅ Helps improve memory utilization
+✅ Reduces manual memory management
+✅ Supports automatic memory cleanup
+
+Heap Memory:
+Heap Memory is a runtime memory area in Java where objects and instance variables are stored.
+
+Characteristics
+✅ Shared among all threads
+✅ Stores objects and instance variables
+✅ Managed by the Garbage Collector
+✅ Created when the JVM starts
+✅ Released when the JVM terminates
+
+Reachable Object:
+A Reachable Object is an object that can be accessed directly or indirectly through active references in the application.
+
+Characteristics:
+✅ Can be accessed through a valid reference
+✅ Remains in heap memory
+✅ Is not eligible for garbage collection
+✅ May be referenced directly or indirectly
+✅ Continues to be used by the application
+
+Unreachable Object
+An Unreachable Object is an object that cannot be accessed through any active reference in the application.
+
+Characteristics:
+✅ Cannot be accessed through a valid reference
+✅ Becomes eligible for garbage collection
+✅ Remains in memory until GC executes
+✅ Occupies heap memory temporarily
+✅ Is removed by the Garbage Collector
+
+Minor Garbage Collection:
+Minor Garbage Collection is a garbage collection process that removes unreachable objects from the Young Generation of heap memory.
+
+Characteristics:
+✅ Occurs in the Young Generation
+✅ Runs more frequently than Major GC
+✅ Removes short-lived objects
+✅ Improves memory availability
+✅ Usually completes quickly
+
+Major Garbage Collection
+Definition
+
+Major Garbage Collection is a garbage collection process that removes unreachable objects from the Old Generation of heap memory.
+
+Characteristics:
+✅ Occurs in the Old Generation
+✅ Runs less frequently than Minor GC
+✅ Processes long-lived objects
+✅ Takes more time than Minor GC
+✅ May impact application performance
+
+Full Garbage Collection:
+Full Garbage Collection is a garbage collection process that examines and cleans the entire heap memory.
+
+Characteristics
+✅ Processes Young and Old Generations
+✅ Reclaims maximum possible memory
+✅ Takes more time than other GC operations
+✅ May pause application execution
+✅ Used when memory requirements are high
+
+Young Generation:
+The Young Generation is a region of heap memory where newly created objects are initially allocated.
+
+Characteristics:
+✅ Stores newly created objects
+✅ Contains Eden and Survivor spaces
+✅ Processes short-lived objects
+✅ Frequently cleaned by Minor GC
+✅ Improves memory management efficiency
+
+Old Generation:
+The Old Generation is a region of heap memory where long-lived objects are stored.
+
+Characteristics:
+✅ Stores long-lived objects
+✅ Receives promoted objects from Young Generation
+✅ Processed by Major GC
+✅ Contains objects with longer lifecycles
+✅ Occupies a significant portion of heap memory
+
+System.gc():
+System.gc() is a method in Java that requests the JVM to perform garbage collection.
+
+Characteristics:
+✅ Requests garbage collection execution
+✅ Does not guarantee immediate garbage collection
+✅ Execution depends on JVM implementation
+✅ Used for memory management requests
+✅ Should not be relied upon for application logic
+
+finalize():
+finalize() is a method that was used to perform cleanup operations before an object is removed by the Garbage Collector.
+
+Characteristics:
+✅ Executed before object removal
+✅ Invoked by the Garbage Collector
+✅ Does not guarantee execution timing
+✅ Introduces performance overhead
+✅ Deprecated in modern Java versions
+
+Memory Leak:
+A Memory Leak is a situation where objects remain reachable and occupy memory even though they are no longer required by the application.
+
+Characteristics:
+✅ Causes unnecessary memory consumption
+✅ Reduces available heap memory
+✅ May degrade application performance
+✅ Can lead to OutOfMemoryError
+✅ Often caused by unused references
+
+OutOfMemoryError:
+An OutOfMemoryError is an error that occurs when the JVM cannot allocate sufficient memory for object creation.
+
+Characteristics:
+✅ Occurs when memory is exhausted
+✅ Prevents new object allocation
+✅ May terminate application execution
+✅ Commonly caused by memory leaks
+✅ Indicates insufficient available memory
+
+
+## Memory Trick
+
+Remember the pattern:
+
+**Definition Formula**
+
+> "<Collection Name> is a class/interface in the Java Collections Framework that implements/represents ___ and stores ___ using ___."
+
+**Characteristics Formula**
+
+1. Order?
+2. Duplicates?
+3. Nulls?
+4. Special feature?
+5. Time complexity?
+
+If you follow this exact structure every time, you'll be able to explain any Java Collection consistently in interviews, code reviews, mentoring sessions, and discussions years from now.
