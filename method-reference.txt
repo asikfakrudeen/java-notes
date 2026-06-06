@@ -1,0 +1,71 @@
+Method Reference:
+A Method Reference is a feature in Java that provides a shorthand way to refer to an existing method using the :: operator.
+
+Characteristics:
+✅ Provides a concise alternative to lambda expressions
+✅ Refers to an existing method using the :: operator
+✅ Improves code readability
+✅ Supports functional programming
+✅ Works with functional interfaces
+
+Static Method Reference:
+A Static Method Reference is a method reference in Java that refers to a static method of a class.
+
+Characteristics:
+✅ Refers to a static method
+✅ Uses the ClassName::methodName syntax
+✅ Improves code readability
+✅ Supports functional programming
+✅ Works with functional interfaces
+
+Example
+Math::abs
+
+Instance Method Reference of a Particular Object:
+An Instance Method Reference of a Particular Object is a method reference in Java that refers to an instance method of a specific object.
+
+Characteristics:
+✅ Refers to an instance method of a specific object
+✅ Uses the objectName::methodName syntax
+✅ Improves code readability
+✅ Supports functional programming
+✅ Works with functional interfaces
+
+Example
+printer::print
+
+Instance Method Reference of an Arbitrary Object:
+An Instance Method Reference of an Arbitrary Object is a method reference in Java that refers to an instance method of an object determined at runtime.
+
+Characteristics:
+✅ Refers to an instance method of an arbitrary object
+✅ Uses the ClassName::methodName syntax
+✅ Improves code readability
+✅ Supports functional programming
+✅ Works with functional interfaces
+
+Example
+String::toUpperCase
+
+Constructor Reference:
+A Constructor Reference is a method reference in Java that refers to a constructor and is used to create objects.
+
+Characteristics:
+✅ Refers to a constructor
+✅ Uses the ClassName::new syntax
+✅ Simplifies object creation
+✅ Improves code readability
+✅ Works with functional interfaces
+
+Example
+Employee::new
+
+Functional Interface:
+A Functional Interface is an interface in Java that contains exactly one abstract method and serves as the target type for lambda expressions and method references.
+
+Characteristics:
+✅ Contains exactly one abstract method
+✅ Supports lambda expressions
+✅ Supports method references
+✅ Promotes functional programming
+✅ Can be annotated with @FunctionalInterface

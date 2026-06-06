@@ -1,0 +1,219 @@
+OOP (Object-Oriented Programming):
+Object-Oriented Programming (OOP) is a programming paradigm in Java that organizes software using classes and objects.
+
+Characteristics
+✅ Organizes software using classes and objects
+✅ Promotes code reusability
+✅ Supports abstraction and encapsulation
+✅ Supports inheritance and polymorphism
+✅ Improves maintainability and scalability
+
+Class:
+A Class is a blueprint in Java that defines the properties and behaviors of objects.
+
+Characteristics:
+✅ Defines object properties using variables
+✅ Defines object behaviors using methods
+✅ Supports object creation
+✅ Promotes code reusability
+✅ Acts as a blueprint for objects
+
+Object:
+An Object is an instance of a class that contains state and behavior.
+
+Characteristics:
+✅ Is created from a class
+✅ Stores data using instance variables
+✅ Performs actions using methods
+✅ Occupies memory at runtime
+✅ Interacts with other objects
+
+Constructor:
+A Constructor is a special member of a class in Java that initializes objects during object creation.
+
+Characteristics:
+✅ Has the same name as the class
+✅ Does not have a return type
+✅ Executes automatically during object creation
+✅ Initializes object state
+✅ Supports constructor overloading
+
+Default Constructor:
+A Default Constructor is a constructor in Java that does not accept any parameters and initializes an object with default values.
+
+Characteristics:
+✅ Does not accept parameters
+✅ Initializes objects with default values
+✅ Executes during object creation
+✅ Is automatically provided by the compiler if no constructor is defined
+✅ Supports object initialization
+
+Parameterized Constructor:
+A Parameterized Constructor is a constructor in Java that accepts parameters and initializes an object with specified values.
+
+Characteristics:
+✅ Accepts parameters
+✅ Initializes objects with custom values
+✅ Executes during object creation
+✅ Supports constructor overloading
+✅ Improves object initialization flexibility
+
+this Keyword:
+The this keyword is a reference in Java that refers to the current object.
+
+Characteristics:
+✅ Refers to the current object
+✅ Accesses instance variables
+✅ Invokes current class methods
+✅ Invokes current class constructors
+✅ Resolves variable name conflicts
+
+new Keyword:
+The new keyword is an operator in Java that creates objects and allocates memory at runtime.
+
+Characteristics:
+✅ Creates objects
+✅ Allocates memory in the heap
+✅ Invokes constructors
+✅ Returns an object reference
+✅ Supports dynamic object creation
+
+Abstraction:
+Abstraction is an OOP principle in Java that hides implementation details and exposes only essential features.
+
+Characteristics:
+✅ Hides implementation details
+✅ Exposes essential features
+✅ Improves code maintainability
+✅ Reduces complexity
+✅ Achieved using abstract classes and interfaces
+
+Encapsulation:
+Encapsulation is an OOP principle in Java that binds data and methods into a single unit and controls access to them.
+
+Characteristics:
+✅ Binds data and methods together
+✅ Protects data from unauthorized access
+✅ Supports data hiding
+✅ Improves maintainability
+✅ Achieved using access modifiers
+
+Inheritance:
+Inheritance is an OOP principle in Java that allows one class to acquire the properties and behaviors of another class.
+
+Characteristics:
+✅ Promotes code reusability
+✅ Establishes an IS-A relationship
+✅ Supports method overriding
+✅ Enables hierarchical design
+✅ Achieved using the extends keyword
+
+Polymorphism:
+Polymorphism is an OOP principle in Java that allows the same method or reference to exhibit different behaviors.
+
+Characteristics:
+✅ Supports multiple forms of behavior
+✅ Improves flexibility
+✅ Promotes code reusability
+✅ Supports method overloading
+✅ Supports method overriding
+
+Method Overloading:
+Method Overloading is a feature in Java that allows multiple methods with the same name but different parameter lists in the same class.
+
+Characteristics:
+✅ Uses the same method name
+✅ Requires different parameter lists
+✅ Occurs within the same class
+✅ Supports compile-time polymorphism
+✅ Improves code readability
+
+Method Overriding:
+Method Overriding is a feature in Java that allows a subclass to provide its own implementation of a method defined in its superclass.
+
+Characteristics:
+✅ Uses the same method signature
+✅ Occurs between parent and child classes
+✅ Supports runtime polymorphism
+✅ Provides specialized behavior
+✅ Requires inheritance
+
+Abstract Class:
+An Abstract Class is a class in Java that cannot be instantiated and is used to provide partial abstraction.
+
+Characteristics:
+✅ Cannot be instantiated
+✅ May contain abstract methods
+✅ May contain concrete methods
+✅ Supports code reuse
+✅ Can be extended by subclasses
+
+Abstract Method:
+An Abstract Method is a method in Java that is declared without an implementation and must be implemented by subclasses.
+
+Characteristics:
+✅ Does not contain a method body
+✅ Must be implemented by subclasses
+✅ Provides abstraction
+✅ Exists within abstract classes or interfaces
+✅ Defines a contract for subclasses
+
+Interface:
+An Interface is a reference type in Java that defines a contract of methods to be implemented by classes.
+
+Characteristics:
+✅ Provides complete abstraction
+✅ Defines method contracts
+✅ Supports multiple inheritance
+✅ Improves loose coupling
+✅ Implemented using the implements keyword
+
+Super Keyword:
+The super keyword is a reference in Java that refers to the immediate parent class object.
+
+Characteristics:
+✅ Refers to the parent class
+✅ Accesses parent class variables
+✅ Invokes parent class methods
+✅ Invokes parent class constructors
+✅ Supports inheritance
+
+Access Modifiers:
+Access Modifiers are keywords in Java that control the accessibility of classes, variables, methods, and constructors.
+
+Characteristics:
+✅ Control accessibility
+✅ Support encapsulation
+✅ Improve security
+✅ Restrict unauthorized access
+✅ Include private, default, protected, and public
+
+Association:
+Association is a relationship in Java that represents a connection between two independent classes.
+
+Characteristics:
+✅ Represents a HAS-A relationship
+✅ Connects independent objects
+✅ Supports object interaction
+✅ Improves modularity
+✅ Can be one-to-one or one-to-many
+
+Aggregation:
+Aggregation is a form of association in Java where one class contains a reference to another class and both can exist independently.
+
+Characteristics:
+✅ Represents a weak HAS-A relationship
+✅ Supports code reuse
+✅ Allows independent object existence
+✅ Improves flexibility
+✅ Is a specialized form of association
+
+Composition:
+Composition is a form of association in Java where one class contains another class and the contained object cannot exist independently.
+
+Characteristics:
+✅ Represents a strong HAS-A relationship
+✅ Establishes ownership
+✅ Prevents independent object existence
+✅ Improves encapsulation
+✅ Is a specialized form of association

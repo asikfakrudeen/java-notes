@@ -1,0 +1,143 @@
+Lambda Expression:
+A Lambda Expression is a feature in Java that provides a concise way to represent an anonymous function and implement functional interfaces.
+
+Characteristics:
+✅ Provides a concise alternative to anonymous classes
+✅ Represents an anonymous function
+✅ Supports functional programming
+✅ Works with functional interfaces
+✅ Improves code readability and maintainability
+
+Functional Interface:
+A Functional Interface is an interface in Java that contains exactly one abstract method and serves as the target type for lambda expressions.
+
+Characteristics:
+✅ Contains exactly one abstract method
+✅ Supports lambda expressions
+✅ Supports method references
+✅ Promotes functional programming
+✅ Can be annotated with @FunctionalInterface
+
+Anonymous Function:
+An Anonymous Function is a function in Java that does not have a name and is defined inline where it is used.
+
+Characteristics:
+✅ Does not have a method name
+✅ Can be defined inline
+✅ Supports functional programming
+✅ Reduces boilerplate code
+✅ Commonly implemented using lambda expressions
+
+Lambda Parameters:
+Lambda Parameters are input values passed to a lambda expression for processing.
+
+Characteristics:
+✅ Define input values for the lambda expression
+✅ Can be single or multiple parameters
+✅ Support type inference
+✅ Are used within the lambda body
+✅ Improve code flexibility
+
+Example
+(name) -> System.out.println(name)
+
+Lambda Body:
+A Lambda Body is the implementation part of a lambda expression that contains the logic to be executed.
+
+Characteristics:
+✅ Contains the executable logic
+✅ Can contain a single statement
+✅ Can contain multiple statements
+✅ Executes when the lambda is invoked
+✅ Processes input parameters
+
+Example
+(name) -> {
+    System.out.println(name);
+}
+
+Predicate:
+A Predicate is a functional interface in Java that accepts an input and returns a boolean result.
+
+Characteristics:
+✅ Accepts a single input parameter
+✅ Returns a boolean value
+✅ Commonly used for filtering operations
+✅ Supports lambda expressions
+✅ Belongs to the java.util.function package
+
+Example
+Predicate<Integer> isEven = n -> n % 2 == 0;
+
+Function:
+A Function is a functional interface in Java that accepts an input and returns a transformed result.
+
+Characteristics:
+✅ Accepts a single input parameter
+✅ Returns a result
+✅ Performs data transformation
+✅ Supports lambda expressions
+✅ Belongs to the java.util.function package
+
+Example
+Function<String, Integer> length = str -> str.length();
+
+Consumer:
+A Consumer is a functional interface in Java that accepts an input and performs an operation without returning a result.
+
+Characteristics:
+✅ Accepts a single input parameter
+✅ Does not return a result
+✅ Performs an action on the input
+✅ Supports lambda expressions
+✅ Belongs to the java.util.function package
+
+Example
+Consumer<String> print = str -> System.out.println(str);
+
+Supplier:
+A Supplier is a functional interface in Java that provides a result without accepting any input.
+
+Characteristics:
+✅ Does not accept input parameters
+✅ Returns a result
+✅ Supplies data when requested
+✅ Supports lambda expressions
+✅ Belongs to the java.util.function package
+
+Example
+Supplier<String> message = () -> "Hello";
+
+Lambda Syntax:
+Lambda Syntax is the syntax used in Java to define a lambda expression using parameters, an arrow operator, and a body.
+
+Characteristics:
+✅ Uses the -> operator
+✅ Contains parameters and a body
+✅ Supports type inference
+✅ Reduces boilerplate code
+✅ Improves readability
+
+Example
+(parameters) -> expression
+
+or
+
+(parameters) -> {
+    // logic
+}
+
+Advantages of Lambda Expressions:
+Lambda Expressions provide a concise and functional approach for implementing behavior in Java.
+
+Characteristics:
+✅ Reduce boilerplate code
+✅ Improve code readability
+✅ Support functional programming
+✅ Simplify collection processing
+✅ Integrate seamlessly with Streams API
+
+Predicate → Takes 1, Returns boolean
+Function  → Takes 1, Returns 1
+Consumer  → Takes 1, Returns nothing
+Supplier  → Takes 0, Returns 1
