@@ -1,0 +1,344 @@
+Good practice is to use a class with enough fields so you can exercise filtering, mapping, grouping, sorting, aggregation, and collectors.
+
+## Dataset
+
+```java
+public class Employee {
+
+    private int id;
+    private String name;
+    private String department;
+    private double salary;
+    private int age;
+    private String city;
+
+    public Employee(int id, String name, String department,
+                    double salary, int age, String city) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+        this.age = age;
+        this.city = city;
+    }
+
+    // Getters
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
+```
+
+```java
+List<Employee> employees = List.of(
+    new Employee(1, "John", "IT", 60000, 28, "Chennai"),
+    new Employee(2, "Alice", "IT", 75000, 32, "Bangalore"),
+    new Employee(3, "Bob", "HR", 50000, 29, "Chennai"),
+    new Employee(4, "Mary", "HR", 55000, 35, "Hyderabad"),
+    new Employee(5, "David", "Finance", 90000, 40, "Mumbai"),
+    new Employee(6, "Sara", "Finance", 85000, 31, "Chennai"),
+    new Employee(7, "Tom", "IT", 65000, 27, "Mumbai"),
+    new Employee(8, "Emma", "Sales", 70000, 30, "Bangalore"),
+    new Employee(9, "James", "Sales", 72000, 33, "Chennai"),
+    new Employee(10, "Sophia", "IT", 80000, 26, "Hyderabad")
+);
+```
+
+---
+
+# Level 1 — Basic Stream Operations
+
+### Task 1
+
+Get all employee names.
+
+Expected Type:
+
+```java
+List<String>
+```
+
+---
+
+### Task 2
+
+Get employees whose salary is greater than 70000.
+
+Expected Type:
+
+```java
+List<Employee>
+```
+
+---
+
+### Task 3
+
+Count employees in the IT department.
+
+Expected Type:
+
+```java
+long
+```
+
+---
+
+### Task 4
+
+Get names of employees from Chennai.
+
+Expected Type:
+
+```java
+List<String>
+```
+
+---
+
+### Task 5
+
+Check if any employee earns more than 100000.
+
+Expected Type:
+
+```java
+boolean
+```
+
+---
+
+# Level 2 — Sorting & Mapping
+
+### Task 6
+
+Sort employees by salary ascending.
+
+---
+
+### Task 7
+
+Sort employees by salary descending.
+
+---
+
+### Task 8
+
+Get the highest-paid employee.
+
+Expected Type:
+
+```java
+Optional<Employee>
+```
+
+---
+
+### Task 9
+
+Get the lowest-paid employee.
+
+Expected Type:
+
+```java
+Optional<Employee>
+```
+
+---
+
+### Task 10
+
+Create a list containing only employee salaries.
+
+Expected Type:
+
+```java
+List<Double>
+```
+
+---
+
+# Level 3 — Collectors
+
+### Task 11
+
+Group employees by department.
+
+Expected Type:
+
+```java
+Map<String, List<Employee>>
+```
+
+---
+
+### Task 12
+
+Count employees in each department.
+
+Expected Type:
+
+```java
+Map<String, Long>
+```
+
+---
+
+### Task 13
+
+Calculate total salary per department.
+
+Expected Type:
+
+```java
+Map<String, Double>
+```
+
+---
+
+### Task 14
+
+Get employee names grouped by city.
+
+Expected Type:
+
+```java
+Map<String, List<String>>
+```
+
+---
+
+### Task 15
+
+Partition employees into:
+
+* Salary >= 70000
+* Salary < 70000
+
+Expected Type:
+
+```java
+Map<Boolean, List<Employee>>
+```
+
+---
+
+# Level 4 — Advanced
+
+### Task 16
+
+Find the highest-paid employee in each department.
+
+Expected Type:
+
+```java
+Map<String, Optional<Employee>>
+```
+
+---
+
+### Task 17
+
+Find average salary by department.
+
+Expected Type:
+
+```java
+Map<String, Double>
+```
+
+---
+
+### Task 18
+
+Find the department having the highest total salary.
+
+Expected Type:
+
+```java
+Optional<Map.Entry<String, Double>>
+```
+
+---
+
+### Task 19
+
+Get employees sorted by age and then by salary.
+
+---
+
+### Task 20
+
+Create a map:
+
+```java
+Employee ID -> Employee Name
+```
+
+Expected Type:
+
+```java
+Map<Integer, String>
+```
+
+---
+
+# Expert-Level Collector Challenges
+
+### Task 21
+
+Get the second highest salary.
+
+---
+
+### Task 22
+
+Find duplicate cities.
+
+---
+
+### Task 23
+
+Find employees whose salary is above the department average.
+
+---
+
+### Task 24
+
+Get top 3 highest-paid employees.
+
+---
+
+### Task 25
+
+Find the youngest employee in each department.
+
+---
+
+Start with **Task 1**, post your solution, and I'll review it and suggest stream-specific improvements if any.
