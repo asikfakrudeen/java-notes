@@ -1,0 +1,239 @@
+Thread:
+A Thread is the smallest unit of execution in Java that allows a program to perform tasks concurrently.
+
+Characteristics:
+✅ Represents an independent path of execution
+✅ Executes tasks concurrently
+✅ Shares process resources with other threads
+✅ Improves application responsiveness
+✅ Managed by the JVM and operating system
+
+Multithreading:
+Multithreading is a feature in Java that allows multiple threads to execute concurrently within a single process.
+
+Characteristics:
+✅ Supports concurrent task execution
+✅ Improves application performance
+✅ Improves application responsiveness
+✅ Shares process resources among threads
+✅ Reduces resource consumption compared to multiple processes
+
+Process:
+A Process is an independent program in execution that contains its own memory and resources.
+
+Characteristics:
+✅ Has its own memory space
+✅ Contains one or more threads
+✅ Executes independently of other processes
+✅ Requires more resources than a thread
+✅ Managed by the operating system
+
+Main Thread:
+The Main Thread is the initial thread created by the JVM that starts the execution of a Java application.
+
+Characteristics:
+✅ Created automatically by the JVM
+✅ Executes the main() method
+✅ Acts as the parent of other threads
+✅ Starts application execution
+✅ Remains active until execution completes
+
+Thread Lifecycle:
+The Thread Lifecycle is the sequence of states through which a thread passes during its execution.
+
+Characteristics:
+✅ Defines thread execution stages
+✅ Managed by the JVM
+✅ Includes multiple thread states
+✅ Changes during execution
+✅ Ends when thread execution completes
+
+New State:
+The New State is a thread state in which a thread object is created but has not yet started execution.
+
+Characteristics:
+✅ Thread object is created
+✅ Execution has not started
+✅ Memory is allocated for the thread
+✅ Exists before start() is called
+✅ Represents the initial thread state
+
+Runnable State:
+The Runnable State is a thread state in which a thread is ready to execute or is currently executing.
+
+Characteristics:
+✅ Ready for execution
+✅ Managed by the thread scheduler
+✅ May be executing on the CPU
+✅ Waits for CPU allocation if necessary
+✅ Achieved after start() is called
+
+Blocked State:
+The Blocked State is a thread state in which a thread waits to acquire a monitor lock.
+
+Characteristics:
+✅ Waits for a lock
+✅ Cannot execute until the lock is acquired
+✅ Occurs during synchronization
+✅ Managed by the JVM
+✅ Returns to Runnable after acquiring the lock
+
+Waiting State:
+The Waiting State is a thread state in which a thread waits indefinitely for another thread to perform an action.
+
+Characteristics:
+✅ Waits indefinitely
+✅ Releases CPU resources
+✅ Requires notification from another thread
+✅ Occurs during inter-thread communication
+✅ Returns to Runnable after notification
+
+Timed Waiting State:
+The Timed Waiting State is a thread state in which a thread waits for a specified period of time.
+
+Characteristics:
+✅ Waits for a specified duration
+✅ Releases CPU resources
+✅ Returns automatically after the timeout expires
+✅ Occurs during sleep() or timed wait operations
+✅ Managed by the JVM
+
+Terminated State:
+The Terminated State is a thread state in which a thread has completed its execution.
+
+Characteristics:
+✅ Execution is completed
+✅ Cannot be restarted
+✅ Releases thread resources
+✅ Represents the final thread state
+✅ Managed by the JVM
+
+Thread Creation Using Thread Class:
+Thread Creation Using Thread Class is a mechanism in Java that creates a thread by extending the Thread class.
+
+Characteristics:
+✅ Extends the Thread class
+✅ Overrides the run() method
+✅ Executes logic within the run() method
+✅ Starts execution using start()
+✅ Supports concurrent execution
+
+Thread Creation Using Runnable Interface:
+Thread Creation Using Runnable Interface is a mechanism in Java that creates a thread by implementing the Runnable interface.
+
+Characteristics:
+✅ Implements the Runnable interface
+✅ Overrides the run() method
+✅ Promotes better design flexibility
+✅ Supports inheritance from another class
+✅ Starts execution using a Thread object
+
+start():
+The start() method is a method in Java that creates a new thread of execution and invokes the run() method.
+
+Characteristics:
+✅ Creates a new thread
+✅ Invokes the run() method internally
+✅ Enables concurrent execution
+✅ Can be called only once per thread
+✅ Managed by the JVM
+
+run():
+The run() method is a method in Java that contains the logic executed by a thread.
+
+Characteristics:
+✅ Contains thread logic
+✅ Executed by the thread
+✅ Can be overridden
+✅ Does not create a new thread when called directly
+✅ Invoked by start()
+
+sleep():
+The sleep() method is a method in Java that pauses the execution of the current thread for a specified period of time.
+
+Characteristics:
+✅ Pauses thread execution
+✅ Accepts a time duration
+✅ Does not release acquired locks
+✅ Causes Timed Waiting state
+✅ Resumes after the specified duration
+
+join():
+The join() method is a method in Java that causes one thread to wait until another thread completes execution.
+
+Characteristics:
+✅ Waits for another thread to complete
+✅ Supports thread coordination
+✅ Blocks the calling thread
+✅ Improves execution control
+✅ Supports concurrent programming
+
+yield():
+The yield() method is a method in Java that suggests the thread scheduler to pause the current thread and allow other threads to execute.
+
+Characteristics:
+✅ Suggests CPU release
+✅ Does not guarantee execution transfer
+✅ Depends on the thread scheduler
+✅ Improves thread cooperation
+✅ Managed by the JVM
+
+Daemon Thread:
+A Daemon Thread is a background thread in Java that provides services to user threads.
+
+Characteristics:
+✅ Runs in the background
+✅ Supports user threads
+✅ Terminates automatically when all user threads finish
+✅ Managed by the JVM
+✅ Performs service-related tasks
+
+User Thread:
+A User Thread is a thread in Java that performs application-specific tasks and keeps the JVM running.
+
+Characteristics:
+✅ Performs application logic
+✅ Keeps the JVM active
+✅ Executes foreground tasks
+✅ Managed by the JVM
+✅ Terminates when execution completes
+
+Synchronization:
+Synchronization is a mechanism in Java that controls access to shared resources by multiple threads.
+
+Characteristics:
+✅ Prevents concurrent access conflicts
+✅ Ensures thread safety
+✅ Controls access to shared resources
+✅ Uses monitor locks
+✅ Supports data consistency
+
+Race Condition:
+A Race Condition is a situation in Java where multiple threads access and modify shared data simultaneously, causing unpredictable results.
+
+Characteristics:
+✅ Occurs during concurrent access
+✅ Causes inconsistent results
+✅ Involves shared resources
+✅ Difficult to reproduce consistently
+✅ Prevented using synchronization
+
+Deadlock:
+A Deadlock is a situation in Java where two or more threads wait indefinitely for resources held by each other.
+
+Characteristics:
+✅ Involves multiple threads
+✅ Causes indefinite waiting
+✅ Prevents task completion
+✅ Occurs due to resource dependency
+✅ Reduces application responsiveness
+
+Thread Safety:
+Thread Safety is a property in Java that ensures correct behavior when multiple threads access shared resources concurrently.
+
+Characteristics:
+✅ Supports concurrent access
+✅ Prevents data inconsistency
+✅ Improves reliability
+✅ Uses synchronization mechanisms
+✅ Ensures predictable execution
