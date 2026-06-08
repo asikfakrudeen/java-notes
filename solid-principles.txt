@@ -1,0 +1,287 @@
+SOLID Principles
+SOLID Principles are five object-oriented design principles in Java that help create maintainable, scalable, flexible, and reusable software.
+
+Characteristics
+✅ Improve code maintainability
+✅ Improve code scalability
+✅ Promote loose coupling
+✅ Improve code reusability
+✅ Support clean software design
+
+
+S — Single Responsibility Principle (SRP)
+The Single Responsibility Principle is a design principle that states a class should have only one responsibility and one reason to change.
+
+Characteristics
+✅ Assigns one responsibility to a class
+✅ Reduces code complexity
+✅ Improves maintainability
+✅ Improves testability
+✅ Supports clean design
+
+Bad
+
+public class Employee {
+
+    public void calculateSalary() {
+        // salary calculation
+    }
+
+    public void saveEmployee() {
+        // database operation
+    }
+
+    public void generateReport() {
+        // report generation
+    }
+}
+
+Good 
+
+public class Employee {
+    private String name;
+}
+
+public class SalaryService {
+    public void calculateSalary(Employee employee) {
+    }
+}
+
+public class EmployeeRepository {
+    public void save(Employee employee) {
+    }
+}
+
+public class ReportService {
+    public void generateReport(Employee employee) {
+    }
+}
+
+
+O — Open Closed Principle (OCP)
+The Open Closed Principle is a design principle that states a class should be open for extension but closed for modification.
+
+Characteristics
+✅ Supports code extension
+✅ Avoids modification of existing code
+✅ Reduces regression issues
+✅ Improves flexibility
+✅ Promotes abstraction
+
+Bad 
+
+public class PaymentService {
+
+    public void processPayment(String type) {
+
+        if(type.equals("CREDIT_CARD")) {
+            System.out.println("Credit Card Payment");
+        }
+
+        if(type.equals("UPI")) {
+            System.out.println("UPI Payment");
+        }
+    }
+}
+
+Good
+
+public interface Payment {
+    void pay();
+}
+
+public class CreditCardPayment implements Payment {
+
+    @Override
+    public void pay() {
+        System.out.println("Credit Card Payment");
+    }
+}
+
+public class UpiPayment implements Payment {
+
+    @Override
+    public void pay() {
+        System.out.println("UPI Payment");
+    }
+}
+
+public class PaymentService {
+
+    public void processPayment(Payment payment) {
+        payment.pay();
+    }
+}
+
+L — Liskov Substitution Principle (LSP)
+The Liskov Substitution Principle is a design principle that states a subclass should be replaceable with its superclass without affecting program correctness.
+
+Characteristics
+✅ Supports proper inheritance
+✅ Preserves expected behavior
+✅ Prevents incorrect substitutions
+✅ Improves reliability
+✅ Promotes polymorphism
+
+Bad
+
+public class Bird {
+
+    public void fly() {
+        System.out.println("Flying");
+    }
+}
+
+public class Penguin extends Bird {
+
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException();
+    }
+}
+
+Good
+
+public abstract class Bird {
+}
+
+public interface Flyable {
+    void fly();
+}
+
+public class Sparrow extends Bird implements Flyable {
+
+    @Override
+    public void fly() {
+        System.out.println("Flying");
+    }
+}
+
+public class Penguin extends Bird {
+}
+
+I — Interface Segregation Principle (ISP)
+The Interface Segregation Principle is a design principle that states a class should not be forced to implement methods it does not use.
+
+Characteristics
+✅ Promotes smaller interfaces
+✅ Reduces unnecessary implementation
+✅ Improves maintainability
+✅ Improves flexibility
+✅ Supports clean design
+
+Bad
+
+public interface Worker {
+
+    void work();
+
+    void eat();
+}
+
+public class Robot implements Worker {
+
+    @Override
+    public void work() {
+    }
+
+    @Override
+    public void eat() {
+        // Robot doesn't eat
+    }
+}
+
+Good
+
+public interface Workable {
+    void work();
+}
+
+public interface Eatable {
+    void eat();
+}
+
+public class Human implements Workable, Eatable {
+
+    @Override
+    public void work() {
+    }
+
+    @Override
+    public void eat() {
+    }
+}
+
+public class Robot implements Workable {
+
+    @Override
+    public void work() {
+    }
+}
+
+D — Dependency Inversion Principle (DIP)
+The Dependency Inversion Principle is a design principle that states high-level modules should depend on abstractions rather than concrete implementations.
+
+Characteristics
+✅ Promotes loose coupling
+✅ Depends on abstractions
+✅ Improves flexibility
+✅ Improves testability
+✅ Supports dependency injection
+
+Bad
+
+public class EmailService {
+
+    public void sendEmail() {
+        System.out.println("Email Sent");
+    }
+}
+
+public class NotificationService {
+
+    private MessageService messageService;
+
+    public NotificationService(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
+    public void notifyUser() {
+        messageService.sendMessage();
+    }
+}
+
+Good
+
+public interface MessageService {
+    void sendMessage();
+}
+
+public class EmailService implements MessageService {
+
+    @Override
+    public void sendMessage() {
+        System.out.println("Email Sent");
+    }
+}
+
+public class SmsService implements MessageService {
+
+    @Override
+    public void sendMessage() {
+        System.out.println("SMS Sent");
+    }
+}
+
+public class NotificationService {
+
+    private MessageService messageService;
+
+    public NotificationService(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
+    public void notifyUser() {
+        messageService.sendMessage();
+    }
+}
