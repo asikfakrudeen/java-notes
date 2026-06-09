@@ -342,3 +342,155 @@ Find the youngest employee in each department.
 ---
 
 Start with **Task 1**, post your solution, and I'll review it and suggest stream-specific improvements if any.
+
+# Level 1 — Basic Stream Operations
+
+### Task 1
+
+Get all employee names.
+
+Expected Type:
+
+```java
+List<String>
+```
+
+---
+
+### Task 2
+
+Get employees whose salary is greater than 70000.
+
+Expected Type:
+
+```java
+List<Employee>
+```
+
+---
+
+### Task 3
+
+Count employees in the IT department.
+
+Expected Type:
+
+```java
+long
+```
+
+---
+
+### Task 4
+
+Get names of employees from Chennai.
+
+Expected Type:
+
+```java
+List<String>
+```
+
+---
+
+### Task 5
+
+Check if any employee earns more than 100000.
+
+Expected Type:
+
+```java
+boolean
+```
+
+---
+
+# Level 2 — Sorting & Mapping
+
+### Task 6
+
+Sort employees by salary ascending.
+
+---
+
+### Task 7
+
+Sort employees by salary descending.
+
+---
+
+### Task 8
+
+Get the highest-paid employee.
+
+Expected Type:
+
+```java
+Optional<Employee>
+```
+
+---
+
+### Task 9
+
+Get the lowest-paid employee.
+
+Expected Type:
+
+```java
+Optional<Employee>
+```
+
+---
+
+### Task 10
+
+Create a list containing only employee salaries.
+
+Expected Type:
+
+```java
+List<Double>
+```
+
+---
+
+# Level 3 — Collectors
+
+### Task 11
+
+Group employees by department.
+
+Expected Type:
+
+```java
+Map<String, List<Employee>>
+```
+
+---
+
+### Task 12
+
+Count employees in each department.
+
+Expected Type:
+
+```java
+Map<String, Long>
+```
+
+---
+
+### Task 13
+
+Calculate total salary per department.
+
+Expected Type:
+
+```java
+Map<String, Double>
+```
+
+---
+
+
