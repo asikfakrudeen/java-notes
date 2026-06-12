@@ -1,0 +1,148 @@
+ACID Properties
+ACID Properties are a set of database transaction principles that ensure data consistency, reliability, and integrity during transaction processing.
+Characteristics
+✅ Ensure data consistency
+✅ Ensure data reliability
+✅ Ensure data integrity
+✅ Support safe transaction processing
+✅ Prevent data corruption
+________________________________________
+
+Atomicity
+Atomicity is an ACID property that ensures all operations within a transaction are completed successfully or none of them are applied.
+Characteristics
+✅ Treats a transaction as a single unit
+✅ Executes all operations completely or not at all
+✅ Prevents partial updates
+✅ Supports rollback on failure
+✅ Ensures transaction consistency
+________________________________________
+
+Example
+Money Transfer
+Account A = ₹1000
+Account B = ₹500
+Transfer = ₹200
+Steps:
+1. Deduct ₹200 from Account A
+2. Add ₹200 to Account B
+If Step 1 succeeds and Step 2 fails:
+Account A = ₹800
+Account B = ₹500
+This is incorrect.
+With Atomicity:
+Rollback Transaction
+
+Account A = ₹1000
+Account B = ₹500
+Either both operations succeed or both fail.
+________________________________________
+
+Consistency
+Consistency is an ACID property that ensures a transaction moves the database from one valid state to another valid state.
+Characteristics
+✅ Maintains data integrity
+✅ Preserves database rules and constraints
+✅ Prevents invalid data states
+✅ Ensures valid transactions
+✅ Maintains business rules
+________________________________________
+
+Example
+Bank Balance Rule
+Account Balance >= 0
+Before Transaction:
+Balance = ₹1000
+Attempt:
+Withdraw ₹1500
+After Transaction:
+Balance = -₹500
+This violates the business rule.
+Consistency prevents this transaction.
+________________________________________
+
+Isolation
+Isolation is an ACID property that ensures concurrent transactions do not interfere with each other.
+Characteristics
+✅ Separates concurrent transactions
+✅ Prevents data inconsistency
+✅ Maintains transaction independence
+✅ Supports concurrent processing
+✅ Controls transaction visibility
+________________________________________
+
+Example
+Two Users Updating Same Account
+Before:
+Balance = ₹1000
+Transaction T1:
+Withdraw ₹200
+Transaction T2:
+Withdraw ₹300
+Without Isolation:
+Incorrect Balance = ₹800
+With Isolation:
+Correct Balance = ₹500
+Each transaction executes independently.
+________________________________________
+
+Durability
+Durability is an ACID property that ensures committed transaction data is permanently stored even if a system failure occurs.
+Characteristics
+✅ Preserves committed data
+✅ Survives system failures
+✅ Stores data permanently
+✅ Uses transaction logs
+✅ Ensures data reliability
+________________________________________
+
+Example
+Transaction:
+Deposit ₹500
+Before:
+Balance = ₹1000
+After Commit:
+Balance = ₹1500
+Suppose power failure occurs immediately after commit.
+After system restart:
+Balance = ₹1500
+The committed data remains intact.
+________________________________________
+
+Transaction
+A Transaction is a sequence of database operations that are executed as a single logical unit of work.
+Characteristics
+✅ Consists of one or more database operations
+✅ Executes as a single unit of work
+✅ Supports data consistency
+✅ Follows ACID properties
+✅ Ends with commit or rollback
+________________________________________
+
+Commit
+A Commit is a transaction operation that permanently saves all changes made during a transaction.
+Characteristics
+✅ Saves transaction changes permanently
+✅ Marks successful transaction completion
+✅ Supports durability
+✅ Makes data visible to other transactions
+✅ Cannot be undone automatically
+________________________________________
+
+Rollback
+A Rollback is a transaction operation that reverses all changes made during a transaction.
+Characteristics
+✅ Reverts transaction changes
+✅ Restores previous database state
+✅ Supports atomicity
+✅ Occurs during transaction failure
+✅ Prevents partial updates
+________________________________________
+
+ACID Properties Summary
+Property	Meaning
+A	Atomicity
+C	Consistency
+I	Isolation
+D	Durability
+

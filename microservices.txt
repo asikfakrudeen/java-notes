@@ -1,0 +1,264 @@
+Microservice
+Definition
+
+A Microservice is an architectural style in which an application is built as a collection of small, independent, and loosely coupled services that communicate with each other over a network.
+
+Characteristics
+
+✅ Consists of small and independent services
+✅ Each service focuses on a specific business functionality
+✅ Supports independent development, deployment, and scaling
+✅ Communicates using APIs, messaging, or event-driven mechanisms
+✅ Promotes loose coupling and high maintainability
+
+Microservices Architecture
+Definition
+
+Microservices Architecture is a software architecture that structures an application as a collection of independently deployable microservices.
+
+Characteristics
+
+✅ Divides applications into smaller services
+✅ Supports independent deployment
+✅ Supports independent scaling
+✅ Improves fault isolation
+✅ Enhances maintainability and flexibility
+
+Service Discovery
+Definition
+
+Service Discovery is a mechanism in microservices that enables services to dynamically locate and communicate with each other.
+
+Characteristics
+
+✅ Maintains service location information
+✅ Supports dynamic service registration
+✅ Enables service-to-service communication
+✅ Improves scalability
+✅ Reduces hardcoded service dependencies
+
+API Gateway
+Definition
+
+An API Gateway is a component in a microservices architecture that acts as a single entry point for client requests.
+
+Characteristics
+
+✅ Provides a single entry point for clients
+✅ Routes requests to appropriate services
+✅ Supports authentication and authorization
+✅ Handles request aggregation
+✅ Improves security and manageability
+
+Inter-Service Communication
+Definition
+
+Inter-Service Communication is a mechanism that enables microservices to exchange data and collaborate with each other.
+
+Characteristics
+
+✅ Enables communication between services
+✅ Supports synchronous communication
+✅ Supports asynchronous communication
+✅ Facilitates distributed processing
+✅ Supports service collaboration
+
+REST Communication
+Definition
+
+REST Communication is a synchronous communication mechanism in which microservices exchange data using HTTP-based REST APIs.
+
+Characteristics
+
+✅ Uses HTTP protocols
+✅ Supports request-response communication
+✅ Transfers data using JSON or XML
+✅ Is simple and widely adopted
+✅ Supports synchronous processing
+
+Example
+Order Service
+      ↓ REST API
+Payment Service
+gRPC Communication
+Definition
+
+gRPC Communication is a synchronous communication mechanism in which microservices exchange data using Protocol Buffers over HTTP/2.
+
+Characteristics
+
+✅ Uses HTTP/2 protocol
+✅ Uses Protocol Buffers for serialization
+✅ Provides high performance
+✅ Supports bidirectional streaming
+✅ Supports synchronous communication
+
+Example
+Order Service
+      ↓ gRPC
+Payment Service
+Event-Driven Communication
+Definition
+
+Event-Driven Communication is an asynchronous communication mechanism in which services communicate by publishing and consuming events.
+
+Characteristics
+
+✅ Supports asynchronous communication
+✅ Promotes loose coupling
+✅ Improves scalability
+✅ Enables event-based processing
+✅ Supports distributed systems
+
+Message Broker
+Definition
+
+A Message Broker is a middleware component that enables asynchronous communication between microservices by transmitting messages.
+
+Characteristics
+
+✅ Supports asynchronous communication
+✅ Decouples communicating services
+✅ Ensures message delivery
+✅ Improves scalability
+✅ Supports event-driven architecture
+
+Kafka
+Definition
+
+Kafka is a distributed event-streaming platform used for high-throughput, fault-tolerant, and scalable message processing.
+
+Characteristics
+
+✅ Supports event-driven communication
+✅ Handles high message throughput
+✅ Provides fault tolerance
+✅ Supports distributed processing
+✅ Enables real-time data streaming
+
+RabbitMQ
+Definition
+
+RabbitMQ is a message broker that enables reliable message delivery between distributed applications and services.
+
+Characteristics
+
+✅ Supports asynchronous communication
+✅ Provides reliable message delivery
+✅ Supports message queues
+✅ Improves decoupling between services
+✅ Supports distributed applications
+
+Database per Service
+Definition
+
+Database per Service is a microservices design pattern in which each microservice owns and manages its own database.
+
+Characteristics
+
+✅ Provides data isolation
+✅ Supports independent service development
+✅ Reduces service dependencies
+✅ Improves scalability
+✅ Promotes loose coupling
+
+Fault Tolerance
+Definition
+
+Fault Tolerance is the ability of a microservice system to continue operating despite failures in one or more services.
+
+Characteristics
+
+✅ Handles service failures gracefully
+✅ Improves system reliability
+✅ Prevents complete system failure
+✅ Supports recovery mechanisms
+✅ Enhances availability
+
+Circuit Breaker
+Definition
+
+A Circuit Breaker is a design pattern that prevents repeated calls to a failing service and improves system resilience.
+
+Characteristics
+
+✅ Detects service failures
+✅ Prevents repeated failed requests
+✅ Improves fault tolerance
+✅ Supports fallback mechanisms
+✅ Enhances system stability
+
+Load Balancer
+Definition
+
+A Load Balancer is a component that distributes incoming requests across multiple service instances.
+
+Characteristics
+
+✅ Distributes traffic evenly
+✅ Improves application availability
+✅ Enhances scalability
+✅ Prevents server overload
+✅ Supports high-performance systems
+
+Monolithic Architecture
+Definition
+
+A Monolithic Architecture is a software architecture in which all application components are developed and deployed as a single unit.
+
+Characteristics
+
+✅ Contains all modules in one application
+✅ Uses a single deployment unit
+✅ Is simpler for small applications
+✅ Has tighter coupling between modules
+✅ Becomes difficult to scale as applications grow
+
+Microservices vs Monolithic Architecture
+Feature	Monolithic	Microservices
+Deployment	Single Unit	Independent Services
+Scaling	Entire Application	Individual Services
+Coupling	Tight Coupling	Loose Coupling
+Database	Shared Database	Database per Service
+Fault Isolation	Low	High
+Maintenance	Difficult for Large Systems	Easier for Large Systems
+Ultimate Interview Definitions
+Microservice
+
+A Microservice is an architectural style in which an application is built as a collection of small, independent, and loosely coupled services that communicate with each other over a network.
+
+API Gateway
+
+An API Gateway is a component in a microservices architecture that acts as a single entry point for client requests.
+
+Service Discovery
+
+Service Discovery is a mechanism in microservices that enables services to dynamically locate and communicate with each other.
+
+Kafka
+
+Kafka is a distributed event-streaming platform used for high-throughput, fault-tolerant, and scalable message processing.
+
+RabbitMQ
+
+RabbitMQ is a message broker that enables reliable message delivery between distributed applications and services.
+
+Easy Memory Rule
+Client
+   ↓
+API Gateway
+   ↓
+Microservices
+   ↓
+Database per Service
+
+Communication between services:
+
+Synchronous  → REST, gRPC
+Asynchronous → Kafka, RabbitMQ
+
+Remember:
+
+Microservice = Small + Independent + Loosely Coupled + Independently Deployable
+
+This is the core explanation expected in Java, Spring Boot, and Microservices interviews.
